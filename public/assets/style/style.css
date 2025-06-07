@@ -1,0 +1,827 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.0rem;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/***** container section ********/
+.container {
+    width: 80%;
+    margin: 0 auto ;
+}
+
+/***** header section ***********/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10em;
+    height: 70px;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*** Logo ****/
+
+nav .logo {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    column-gap: 25px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: #ff0000;
+    animation: infinite;
+    transition: 0.5s ease-in-out cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    border-bottom:3px solid #ff0000;
+    transition: 0.10s ease-in;
+}
+
+.btnContact a {
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    padding: 10px 23px;
+    color: #ff0000;
+    transition: 0.5s ease-in;
+}
+
+.btnContact a:hover {
+    cursor: pointer;
+    background: linear-gradient(125deg, #c20000 40%, #ffcc00 175%);
+    transform: scale(10);
+    color: #dadada;
+}
+/***** btnToogle ************/
+.btnToggle {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.ligne {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #ff0000;
+}
+
+.btnToggle .ligne:nth-child(1) {
+    top:15px
+}
+
+.btnToggle .ligne:nth-child(2) {
+    top:30px
+}
+
+/**** Animation Toogle ****/
+.btnToggle.active .ligne:nth-child(1) {
+    top:15px;
+    transform: rotate(45deg);
+}
+
+.btnToggle.active .ligne:nth-child(2) {
+    top:15px;
+    transform: rotate(-45deg);
+}
+
+/** Banners ************/
+#banner {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(1, 4, 23, 0.79), rgb(1, 1, 5)), url("/public/assets/img/engineering.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#banner .bannerNotice {
+    padding: 10px 0px;
+    text-align: center;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+#banner h1 {
+    padding: 0px 0;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffffff;
+}
+
+#banner p {
+    text-align: center;
+    color: #ffffff;
+}
+
+.btnBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.btnBanner a {
+    background: linear-gradient(125deg, #c20000 40%, #ffcc00 175%);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/** AboutContent **/
+#about .aboutCarousel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px; 
+}
+
+#about h2 {
+    padding: 25px 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+#about h2::after {
+    content: '';
+    width: 5%;
+    height: 5px;
+    background: #ff0000;
+    display: block;
+}
+
+.aboutCarousel-Items h3 {
+    padding: 30px 0;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #000000;
+}
+
+.aboutCarousel-Items i {
+    color: #ff0000;
+    font-size: 1.1em;
+}
+
+.aboutCarousel-Picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/** Services **/
+#services {
+    padding: 25px 0;
+    background: #f5f5f6;
+}
+
+#services .serviceContent {
+    display: grid; 
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 0px;
+    margin-bottom: 30px;
+    height: 90vh                                                                                              ;
+}
+
+.serviceContent a {
+    text-decoration: none;
+    color: #000000;
+    border: 2px;
+    border-bottom: 1px #c20000;
+    /* box-shadow: -3px 10px 15px -2px rgba(0,0,0,0.1); */
+}
+
+#services .container h1 {
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+#services .container h1::after {
+    content: '';
+    width: 5%;
+    height: 5px;
+    background: #ff0000;
+    display: block;
+}
+
+  /**** Start Section services Items 1 ****/
+.items {
+    transition: 0.3s linear;
+}
+
+.items h3 {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.items p {
+    margin: 10px;
+    text-align: justify;
+}
+
+.items i {
+    background-color: #fff;;
+    padding: 15px 10px;
+    font-size: 2em;
+    color: #c20000;
+}
+
+.items:hover {
+    /* background: linear-gradient(125deg, #c20000 40%, #ffcc00 175%);*/
+    box-shadow: -3px 10px 15px -2px rgba(0,0,0,0.1);
+    transform: translateY(10px);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+}
+    /**** The end Section services Items 1 ****/
+
+/********** controlForm php *********/
+.controlForm {
+    margin: auto;
+    width: 75%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    border: 1px solid #454545;
+}
+
+/********** controlForm *********/
+.blockContact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 40px 0;
+}
+
+.blockContactItems h1 {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.blockContactItems p {
+    padding: 20px 0;
+}
+
+.blockContactItems .socialMedia {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px 0;
+}
+.blockContactItems .socialMedia a {
+    color: #000000;
+    font-size: 1em;
+}
+
+.blockContactItems .socialMedia i {
+    color: #ff0000;
+}
+
+#formContainer {
+    padding: 5px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background-color: #f2f2f2cc;
+    box-shadow: 0px 8px 12px 0px rgba(82, 82, 82, 0.2);
+}
+
+.formContent {
+    width: auto;
+    margin: auto;
+    padding: 5px 20px;
+}
+.block0 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.block0 label {
+    padding: 20px 0;
+}
+
+.block0 input {
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline-color: #ff0000;
+}
+
+.block1 {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0px;
+}
+
+.block1 label {
+    padding: 10px 0;
+}
+
+.block1 input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline-color: #ff0000;
+}
+
+.block2 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+.block2 textarea {
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline-color: #ff0000;
+}
+
+
+.block3 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+.block3 input[type=submit]{
+    padding: 22px 5px;
+    border: 1px solid #ccc;
+    background: #ff0000;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    animation: alternate;
+}
+
+.block3 input[type=submit]:hover {
+    background: #000000;
+    color: #ff0000;
+}
+
+/******* bannerContact ********/
+
+#bannerContact {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(1, 4, 23, 0.79), rgb(1, 1, 5)), url("/public/assets/img/contact.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#bannerContact h1 {
+    color: #ff0000;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+#bannerContact p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.1em;
+}
+.bannerContact a {
+    display: inline-block;
+    margin: 0 480px;
+    margin-bottom: 20px;
+    color: #ff0000;
+    border: 1px solid #fff;
+    background: #000000;
+    padding: 2px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1.5s ease-in-out;
+}
+
+.bannerContact a:hover {
+    color: #fff;
+    border: 1px solid #ff0000;
+}
+
+.bannerContact i {
+    color: #ffd500;
+}
+
+/******** Accompagnemement *******/
+#accompProject {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(125deg, #c20000 40%, #ffcc00 175%);
+    background-size: cover;
+    background-position: center;
+}
+
+.accompContent {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.accompContent h2 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 20px;
+    background: linear-gradient(125deg, #c20000 40%, #ffcc00 175%);
+}
+
+.accompContent p {
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.btnAccomp a {
+    display: inline-block;
+    color: #ff0000;
+    background: #ffffff;
+    font-weight: bold;
+    padding: 10px 19px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1.5s ease-in-out;
+}
+
+/*** Section Team ***/
+#team {
+    position: relative;
+    height: 65vh;
+    display: flex;
+}
+
+#team .container h3 {
+    padding: 25px 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    color:#000000;
+}
+
+#team .container h3::after{
+    content: '';
+    width: 5%;
+    height: 5px;
+    background: #ff0000;
+    display: block;
+}
+
+#team .teamContent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.teamItems {
+    position: relative;
+    width: 100%;
+}
+
+.teamName {
+    display:block;
+    color: #ff0000;
+    text-align: center;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: 0.5s linear;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+.teamItems:hover .image {
+    opacity: 0.7;
+}
+  
+.teamItems:hover .middle {
+    opacity: 1;
+}
+  
+.teamLink {
+    background-color: #ff0000;
+    font-size: 16px;
+    padding: 10px 32px;
+}
+
+.teamLink a {
+    color: #fff;
+}
+
+.teamLink i {
+    padding: 10px 2px;
+}
+
+/**** Footer section ****/
+#footer {
+    padding: 20px 0;
+    background: #f3f4f6;
+}
+
+#footer .footerContentFirst {
+    display: grid; 
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10px;
+}
+
+#footer .footerContentFirst .titleLeft h3 {
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.titleLeft p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#footer .footerContentFirst .titleMiddle h3 {
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.titleMiddle-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 15px;
+}
+
+
+#footer .footerContentFirst .titleRight h3 {
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.titleRight p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+
+.newsletter form input[type="email"] {
+    padding: 5px 12px;
+    border: 1px solid #ccc;
+    outline-color: #c20000;
+}
+
+.newsletter form input[type="submit"] {
+    padding: 5px 12px;
+    border: 1px solid #ccc;
+    outline-color: #c20000;
+    cursor: pointer;
+}
+
+#footer .footerContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+#footer .footerContent .footerLeft {
+    color: #ff0808;
+} 
+
+#footer .footerContent .footerRight {
+    display: flex; 
+}
+
+#footer .footerContent .footerRight a {
+    margin-right: 10px;
+    color: #ff0808;
+}
+
+#footer .footerContent .footerRight i {
+    font-size: 1.2rem;
+}
+
+
+/****** @media query **********/
+
+@media only screen and (max-width: 600px) {
+    /* Style adjustments for screens smaller than 600px */
+
+        /** Navigation section **/
+    nav {
+        padding: 10px 30px;  
+    }
+    
+    nav ul {
+        display: none;
+        padding: 17px 0;
+        position: absolute;
+        top: 70px;
+        height: 150px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        row-gap: 22px;
+        background: #ff0000;
+        z-index: 9999;
+    } 
+    nav ul li a {
+        margin: 30px;
+        color: #ffffff;
+    }  
+    nav ul li a:hover {
+        font-weight: bold;
+        border-bottom:3px solid #ffffff;
+    }
+
+    /***** btnContact ******/
+    .btnContact a {
+        display: none;
+        border: 1px solid #ff0000;
+        border-radius: 5px;
+        padding: 10px 23px;
+        color: #ff0000;
+    }
+
+    /***** btnToogle ********/
+    .btnToggle {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+    }
+    /***** Banner ***/
+    #banner {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom, rgba(1, 4, 23, 0.79), rgb(1, 1, 5)), url("/public/assets/img/engineering.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #banner .bannerNotice {
+        display: none;
+        padding: 80px 0px;
+        text-align: center;
+        color: #ff0000;
+        font-weight: bold;
+    }
+    
+    #banner h1 {
+        padding: 60px 0;
+        font-weight: bold;
+        font-size: 1.7em;
+        text-align: center;
+        color: #ffffff;
+    }
+    /** About Us Section **/
+    #about .aboutCarousel {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+        margin-bottom: 20px; 
+    }   
+    #about h2 {
+        padding: 15px 0;
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #000000;
+    }
+    
+    .aboutCarousel-Items h3 {
+        padding: 15px 0;
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #000000;
+    }
+
+    .aboutCarousel-Items p {
+        text-align: justify;
+    }
+
+
+    /** Services **/
+    #services {
+        padding: 25px 0;
+        background: #f3f4f6;
+    }
+
+    #services .serviceContent {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        height: 225vh;                                                                          ;
+    }
+
+    /**** Accompagment Projet ****/
+    #accompProject {
+        position: relative;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom, #ff0000, #ff0808), url("/public/assets/img/accomplishment.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    /**** Teams Section *****/
+    #team .teamContent {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .image {
+        display: none;
+        width: 100%;
+        height: auto
+    }
+    
+    /**** Footer Section ****/
+    .footerContent {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
