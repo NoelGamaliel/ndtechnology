@@ -73,6 +73,7 @@ nav ul li a:hover {
     transform: scale(10);
     color: #dadada;
 }
+
 /***** btnToogle ************/
 .btnToggle {
     height: 50px;
@@ -98,6 +99,17 @@ nav ul li a:hover {
 
 .btnToggle .ligne:nth-child(2) {
     top:30px
+}
+
+#mousemove {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #c20000;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease;
+    z-index: 99;
 }
 
 /**** Animation Toogle ****/
