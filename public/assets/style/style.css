@@ -112,6 +112,10 @@ nav ul li a:hover {
     z-index: 99;
 }
 
+.box {
+    display: block;
+}
+
 /**** Animation Toogle ****/
 .btnToggle.active .ligne:nth-child(1) {
     top:15px;
@@ -195,19 +199,19 @@ nav ul li a:hover {
     display: block;
 }
 
-.aboutCarousel-Items h3 {
+.aboutCarousel_Items h3 {
     padding: 30px 0;
     font-weight: bold;
     font-size: 1.3em;
     color: #000000;
 }
 
-.aboutCarousel-Items i {
+.aboutCarousel_Items i {
     color: #ff0000;
     font-size: 1.1em;
 }
 
-.aboutCarousel-Picture img {
+.aboutCarousel_Picture img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -603,29 +607,43 @@ hr {
 #footer .footerContentFirst .titleLeft h3 {
     padding: 20px 0;
     font-weight: bold;
+    color: #ff0000;
 }
 
 .titleLeft p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: justify;
 }
 
 #footer .footerContentFirst .titleMiddle h3 {
     padding: 20px 0;
     font-weight: bold;
+    color: #ff0000;
 }
 
-.titleMiddle-links {
+.titleMiddle_links {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     row-gap: 15px;
 }
 
+.titleMiddle_links li a {
+    color: #ff0000;
+    transition: 0.5s ease-in-out cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.titleMiddle_links li a:hover {
+    font-weight: bold;
+    border-bottom:3px solid #ff0000;
+    transition: 0.10s ease-in;
+}
+
 
 #footer .footerContentFirst .titleRight h3 {
     padding: 20px 0;
     font-weight: bold;
+    color: #ff0000;
 }
 
 .titleRight p {
@@ -641,14 +659,18 @@ hr {
 
 .newsletter form input[type="email"] {
     padding: 5px 12px;
-    border: 1px solid #ccc;
+    border-radius: 5px 5px;
+    border: 1px solid #ff0000;
     outline-color: #c20000;
 }
 
 .newsletter form input[type="submit"] {
     padding: 5px 12px;
     border: 1px solid #ccc;
-    outline-color: #c20000;
+    border-radius: 5px 5px;
+    font-weight: bold;
+    color: #eee;
+    background-color: #ff0000;
     cursor: pointer;
 }
 
@@ -679,6 +701,7 @@ hr {
 
 /****** @media query **********/
 
+/* Medium devices (Mobile, 600px and up) */
 @media only screen and (max-width: 600px) {
     /* Style adjustments for screens smaller than 600px */
 
@@ -689,17 +712,22 @@ hr {
     
     nav ul {
         display: none;
-        padding: 17px 0;
+        padding: 20px 0;
         position: absolute;
         top: 70px;
         height: 150px;
         right: 0;
         left: 0;
         flex-direction: column;
-        row-gap: 22px;
+        row-gap: 20px;
         background: #ff0000;
         z-index: 9999;
     } 
+
+    nav ul li {
+        padding: 5px 0;
+    }
+
     nav ul li a {
         margin: 30px;
         color: #ffffff;
@@ -770,14 +798,14 @@ hr {
         color: #000000;
     }
     
-    .aboutCarousel-Items h3 {
+    .aboutCarousel_Items h3 {
         padding: 15px 0;
         font-weight: bold;
         font-size: 1.3em;
         color: #000000;
     }
 
-    .aboutCarousel-Items p {
+    .aboutCarousel_Items p {
         text-align: justify;
     }
 
@@ -821,10 +849,20 @@ hr {
     }
     
     /**** Footer Section ****/
+    #footer .footerContentFirst {
+        display: grid; 
+        grid-gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #footer .footerContentFirst .titleLeft {
+        margin-top: -20px 0;
+    }
+
     .footerContent {
-        display: flex;
-        flex-direction: column;
-        row-gap: 20px;
+        display: grid; 
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

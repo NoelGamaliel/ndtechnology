@@ -1,7 +1,4 @@
-const mousemove = document.getElementById('mousemove');
+const btnToggle = document.querySelector(".btnToggle");
 
-window.addEventListener("mousemove", (e) => {
-    mousemove.style.left = e.pageX + "px";
-    mousemove.style.top = e.pageY + "px";   
-})
+console.log(btnToggle);
 
