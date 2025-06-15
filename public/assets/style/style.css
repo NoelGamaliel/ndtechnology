@@ -112,9 +112,10 @@ nav ul li a:hover {
     z-index: 99;
 }
 
-.box {
+.active {
     display: block;
 }
+
 
 /**** Animation Toogle ****/
 .btnToggle.active .ligne:nth-child(1) {
@@ -702,30 +703,33 @@ hr {
 /****** @media query **********/
 
 /* Medium devices (Mobile, 600px and up) */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+
     /* Style adjustments for screens smaller than 600px */
 
         /** Navigation section **/
     nav {
-        padding: 10px 30px;  
+        padding: 10px 30px;
+        height: 80px;   
     }
     
     nav ul {
         display: none;
         padding: 20px 0;
         position: absolute;
-        top: 70px;
-        height: 150px;
+        top: 75px;
+        height: 160px;
         right: 0;
         left: 0;
         flex-direction: column;
-        row-gap: 20px;
+        row-gap: 30px;
         background: #ff0000;
         z-index: 9999;
+        transition: 0.1s ease;
     } 
 
     nav ul li {
-        padding: 5px 0;
+        padding: 10px 0;
     }
 
     nav ul li a {
@@ -809,7 +813,6 @@ hr {
         text-align: justify;
     }
 
-
     /** Services **/
     #services {
         padding: 25px 0;
@@ -867,8 +870,166 @@ hr {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 10px 30px;
+        height: 90px; 
+    }
+    
+    nav ul {
+        display: none;
+        padding: 20px 0;
+        position: absolute;
+        top: 90px;
+        height: 160px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        row-gap: 25px;
+        background: #ff0000;
+        z-index: 9999;
+        transition: 0.1s ease;
+    } 
 
+    nav ul li {
+        padding: 8px 0;
+    }
+
+    nav ul li a {
+        margin: 30px;
+        color: #ffffff;
+    }  
+    nav ul li a:hover {
+        font-weight: bold;
+        border-bottom:3px solid #ffffff;
+    }
+
+    /***** btnContact ******/
+    .btnContact a {
+        display: none;
+        border: 1px solid #ff0000;
+        border-radius: 5px;
+        padding: 10px 23px;
+        color: #ff0000;
+    }
+
+    /***** btnToogle ********/
+    .btnToggle {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+    }
+    /***** Banner ***/
+    #banner {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom, rgba(1, 4, 23, 0.79), rgb(1, 1, 5)), url("/public/assets/img/engineering.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #banner .bannerNotice {
+        display: none;
+        padding: 80px 0px;
+        text-align: center;
+        color: #ff0000;
+        font-weight: bold;
+    }
+    
+    #banner h1 {
+        padding: 60px 0;
+        font-weight: bold;
+        font-size: 1.7em;
+        text-align: center;
+        color: #ffffff;
+    }
+    /** About Us Section **/
+    #about .aboutCarousel {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+        margin-bottom: 20px; 
+    }   
+    #about h2 {
+        padding: 15px 0;
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #000000;
+    }
+    
+    .aboutCarousel_Items h3 {
+        padding: 15px 0;
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #000000;
+    }
+
+    .aboutCarousel_Items p {
+        text-align: justify;
+    }
+
+    /** Services **/
+    #services {
+        padding: 25px 0;
+        background: #f3f4f6;
+    }
+
+    #services .serviceContent {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        height: 225vh;                                                                          ;
+    }
+
+    /**** Accompagment Projet ****/
+    #accompProject {
+        position: relative;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom, #ff0000, #ff0808), url("/public/assets/img/accomplishment.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    /**** Teams Section *****/
+    #team .teamContent {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .image {
+        display: none;
+        width: 100%;
+        height: auto
+    }
+    
+    /**** Footer Section ****/
+    #footer .footerContentFirst {
+        display: grid; 
+        grid-gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #footer .footerContentFirst .titleLeft {
+        margin-top: -20px 0;
+    }
+
+    .footerContent {
+        display: grid; 
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
